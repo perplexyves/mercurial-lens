@@ -9,6 +9,7 @@
     "vscode": "^1.81.0"
   },
   "categories": [
+    "SCM Providers",
     "Other"
   ],
   "activationEvents": [],

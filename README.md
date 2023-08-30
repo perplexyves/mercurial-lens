@@ -21,4 +21,7 @@ You can now finally know:
 ## Upcoming features ⏳
 - Improving the performance/speed of showing the message
 - Showing diff code
+- Fixing some bugs in the display
 - And much more!
+
+Stay Tuned
