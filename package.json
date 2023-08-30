@@ -1,0 +1,40 @@
+{
+  "name": "mercurial-lens",
+  "displayName": "Mercurial Lens",
+  "publisher": "yvesdb",
+  "description": "Get the most out of Mercurial inside of VS Code",
+  "icon": "pics/mercurial-lens-logo.png",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mercurial-lens.helloWorld",
+        "title": "Mercurial Lens"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "@types/vscode": "^1.81.0",
+    "@vscode/test-electron": "^2.3.2",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3"
+  }
+}
