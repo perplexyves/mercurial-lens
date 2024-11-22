@@ -33,9 +33,9 @@ function activate(context) {
     ).range;
 
     decorationTimeout = setTimeout(async () => {
-      console.time("all");
+      // console.time("all");
       const currentFileLinesInfo = await executeCommand(
-        `hg blame -cu ${activeEditor.document.fileName}`
+        `hg blame -cu "${activeEditor.document.fileName}"`
       );
 
       const currentLineInfo =
@@ -117,14 +117,14 @@ function activate(context) {
 
   let disposable = vscode.commands.registerCommand(
     "mercurial-lens.helloWorld",
-    function () {}
+    function () { }
   );
 
   context.subscriptions.push(disposable);
 }
 
 // This method is called when your extension is deactivated
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
   activate,
