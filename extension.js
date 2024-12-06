@@ -5,7 +5,7 @@ const getCommitStats = require("./utils/commit-stats");
 const executeCommand = require("./utils/exec-cmd");
 const timeAgo = require("./utils/time-ago");
 
-function activate(context) {
+function activate() {
   let decoration;
   let hover;
   let decorationTimeout;
@@ -115,12 +115,6 @@ function activate(context) {
     }, 400);
   });
 
-  let disposable = vscode.commands.registerCommand(
-    "mercurial-lens.helloWorld",
-    function () { }
-  );
-
-  context.subscriptions.push(disposable);
 }
 
 // This method is called when your extension is deactivated

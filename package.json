@@ -12,15 +12,12 @@
     "SCM Providers",
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "mercurial-lens.helloWorld",
-        "title": "Mercurial Lens"
-      }
-    ]
+    "commands": []
   },
   "scripts": {
     "lint": "eslint .",
