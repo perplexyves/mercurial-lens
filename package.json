@@ -15,14 +15,17 @@
   "activationEvents": [
     "onStartupFinished"
   ],
-  "main": "./extension.js",
+  "main": "./dist/mercurial-lens.js",
   "contributes": {
     "commands": []
   },
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "test": "node ./test/runTest.js",
+    "watch:esbuild": "node esbuild.js --watch",
+    "package": "npm run lint && node esbuild.js --production",
+    "vscode:prepublish": "npm run package"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
@@ -30,6 +33,7 @@
     "@types/node": "20.2.5",
     "@types/vscode": "^1.81.0",
     "@vscode/test-electron": "^2.3.2",
+    "esbuild": "^0.24.0",
     "eslint": "^8.41.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
